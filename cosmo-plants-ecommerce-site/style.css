@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Poppins", sans-serif; color: #2e3d2f; background: #f8fdf8; scroll-behavior: smooth; }
+
+.navbar {
+  position: sticky; top: 0; background: #ffffffdd;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem; backdrop-filter: blur(8px); z-index: 10;
+}
+.navbar .logo { font-weight: 700; font-size: 1.4rem; color: #2c5e2e; }
+.navbar nav a { margin-left: 1rem; text-decoration: none; color: #2e3d2f; transition: color 0.3s; }
+.navbar nav a:hover { color: #2c5e2e; }
+
+.hero {
+  background: url('images/plants.webp') center/cover no-repeat;
+  color: white; text-align: center; padding: 8rem 2rem; position: relative;
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+.hero-content { position: relative; z-index: 1; max-width: 600px; margin: auto; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { margin-bottom: 2rem; }
+.btn {
+  background: #2c5e2e; color: white; padding: 0.7rem 1.5rem;
+  border: none; border-radius: 5px; cursor: pointer; text-decoration: none;
+  transition: background 0.3s;
+}
+.btn:hover { background: #3f7a41; }
+
+.products { text-align: center; padding: 4rem 2rem; }
+.product-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem; margin-top: 2rem;
+}
+.product-card {
+  background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  overflow: hidden; padding-bottom: 1rem;
+}
+.product-card img { width: 100%; height: 220px; object-fit: cover; }
+.product-card h3 { margin: 1rem 0 0.5rem; }
+.product-card p { font-size: 0.9rem; margin-bottom: 1rem; padding: 0 1rem; }
+
+.about, .testimonials, .faq { text-align: center; padding: 4rem 2rem; background: #f0f8f0; }
+.testimonial { margin: 1rem auto; max-width: 500px; font-style: italic; }
+
+footer {
+  background: #2c5e2e; color: white; text-align: center;
+  padding: 2rem 1rem; font-size: 0.9rem;
+}
+footer a { color: #d5f5d5; text-decoration: none; }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 2rem; }
+}
